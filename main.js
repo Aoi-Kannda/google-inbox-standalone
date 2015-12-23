@@ -6,5 +6,13 @@ chrome.app.runtime.onLaunched.addListener(function() {
     }
   };
 
-  chrome.app.window.create('app.html', windowOptions);
+  chrome.app.window.create('app.html', windowOptions, function(win) {
+    win.contentWindow.onload = function() {
+      var webview = win.contentWindow.document.getElementById('app-view');
+      webview.addEventListener('newwindow', function(e) {
+        e.preventDefault();
+        chrome.browser.openTab({url: e.targetUrl});
+      });
+    };
+  });
 });

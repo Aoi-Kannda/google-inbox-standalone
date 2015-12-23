@@ -5,7 +5,8 @@
   "author": "Jake Bellacera",
   "manifest_version": 2,
   "permissions": [
-    "webview"
+    "webview",
+    "browser"
   ],
   "app": {
     "background": {

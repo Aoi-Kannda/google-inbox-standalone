@@ -1,7 +1,7 @@
 {
   "name": "Google Inbox",
   "description": "Google Inbox as a standalone application.",
-  "version": "0.1",
+  "version": "0.2",
   "author": "Jake Bellacera",
   "manifest_version": 2,
   "permissions": [
